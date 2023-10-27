@@ -27,19 +27,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  txt:{
-    fontSize: 25,
-  },
-  txt2: {
-      fontSize: 40,
-      color: 'white',
-  },
-  button1: {
-    backgroundColor: 'blue',
-      fontSize: 40,
-      padding: 5,
-      borderRadius: 10,
-      margin: 10,
-  }
-  
 });
