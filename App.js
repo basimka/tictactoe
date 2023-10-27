@@ -23,10 +23,9 @@ const styles = StyleSheet.create({
   },
   txt2:{
     fontSize: 25,
-
+  
   },
   button1:{
     
-
   }
 });
