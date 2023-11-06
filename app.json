@@ -18,7 +18,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package":"tothepointcode.tictactoe",
+      "package": "ddaiver.tictactoe",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -26,6 +26,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d2e35f35-316c-4173-a951-e17497e7065b"
+      }
     }
   }
 }
