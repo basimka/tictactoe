@@ -11,9 +11,11 @@ export default function App() {
   
   return (
     <View style={styles.container}>
-      
-      
- 
+      <Text style={styles.txt}>The number is: {number1}</Text>
+      <TouchableOpacity style={styles.button1} onPress={() => addToNumber()}>
+        <Text style={styles.txt2}>Add</Text>
+      </TouchableOpacity>
+
 
       <StatusBar style="auto" />
     </View>
@@ -27,4 +29,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  txt:{
+    fontSize:25,
+
+
+  },
+  txt2:{
+    fontSize:45,
+    color: 'white',
+
+  },
+  button1:{
+    backgroundColor:'blue',
+    fontSize:45,
+    padding:5,
+    borderRadius: 10,
+
+  }
 });
