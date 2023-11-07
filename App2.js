@@ -15,6 +15,8 @@ export default function App() {
       <TouchableOpacity style={styles.button1} onPress={() => addToNumber()}>
         <Text style={styles.txt2}>Add</Text>
       </TouchableOpacity>
+
+
       <StatusBar style="auto" />
     </View>
   );
@@ -29,15 +31,19 @@ const styles = StyleSheet.create({
   },
   txt:{
     fontSize:25,
+
+
   },
   txt2:{
     fontSize:45,
     color: 'white',
+
   },
   button1:{
     backgroundColor:'blue',
     fontSize:45,
     padding:5,
     borderRadius: 10,
+
   }
 });
