@@ -24,9 +24,9 @@ export default function App() {
       setRefresh(!refresh)
       checkIfPlayerWin()
     }
-      
+  
+  }
 
-    
   const checkIfPlayerWin = () => {
     if (board[0] == board[1] && board[1] == board[2] && board[0] !== " "){
       playerWon(board[0])
@@ -46,7 +46,6 @@ export default function App() {
       playerWon(board[2])
     }
   }
-  }
 
   const playerWon = (Symbol) => {
     alert("Player " + Symbol + " WON")
@@ -56,6 +55,11 @@ export default function App() {
         " "," "," ",
         " "," "," ",
       ])
+      if (Symbol == "O"){
+        setNotification("X to Start")
+      }else{
+        setNotification("O to Start")
+      }
   }
 
   const [board, setBoard] = useState(
