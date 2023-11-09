@@ -23,6 +23,7 @@ export default function App() {
       setBoard(newBoard)
       setRefresh(!refresh)
       checkIfPlayerWin()
+      checkIfNobodyWin()
     }
   
   }
@@ -46,6 +47,13 @@ export default function App() {
       playerWon(board[2])
     }
   }
+//Проверка если ни кто не выиграл
+  //checkIfNobodyWin = () =>{
+  //  if(board[0] !== " " && board[1] !== " " && board[2] !== " " && board[3] !== " " &&
+ //   board[4] !== " " && board[5] !== " " && board[6] !== " " && board[7] !== " " && board[8] !== " "){
+  //    playerNobodyWon()
+ //   }
+ // }
 
   const playerWon = (Symbol) => {
     alert("Player " + Symbol + " WON")
