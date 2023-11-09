@@ -103,6 +103,7 @@ const styles = StyleSheet.create({
   },
   txt2:{
     fontSize:20,
+    
 
   },
   button1:{
@@ -110,17 +111,20 @@ const styles = StyleSheet.create({
     fontSize:45,
     padding:5,
     borderRadius: 10,
+    
   },
   list:{
     fontSize:45,    
     width:300,
     height:300,
+    
   },
   square:{
     backgroundColor:"blue",
     height:60,
     width:40,
     margin:10,
+    
 
   }
 });
