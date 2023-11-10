@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState} from 'react'
-import { FlatList, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { FlatList, StyleSheet, Text, View, TouchableOpacity,Image } from 'react-native';
 
 
 export default function App() {
@@ -96,19 +96,29 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Image source={require('./assets/bg2.jpg')} style={styles.image2}/>
       <StatusBar style="auto" />
       <Text style={styles.txt1}>TicTacToe</Text>
       <Text style={styles.txt2}>{notification}</Text>
-      <FlatList 
-      style={styles.list} 
-      data={board} 
-      numColumns={3} 
-      extraData={refresh}
-      renderItem={({item, index}) =>(
-        <TouchableOpacity style={styles.square} onPress={()=>pressField(index)}>
-          <Text style={styles.txtX}>{item}</Text>
-        </TouchableOpacity>
+      <view>
+        <Image source={require('./assets/bg.png')} style={styles.image}/>         
+        <FlatList 
+          style={styles.list} 
+          data={board} 
+          numColumns={3} 
+          extraData={refresh}
+          renderItem={({item, index}) =>(
+            <TouchableOpacity 
+              style={styles.square} 
+              onPress={()=>pressField(index)}>
+
+              <Text style={styles.txtX}>{item}</Text>
+            </TouchableOpacity>
       )}/>
+
+      </view>
+      <Text style={styles.txt3}>Written by dDaiver</Text>
+      
     </View>
   );
 
@@ -123,9 +133,15 @@ const styles = StyleSheet.create({
   },
   txt1:{
     fontSize:50,
+    position:'absolute',
+    top:60,
+    color:'white'
   },
   txt2:{
     fontSize:20,
+    position:'absolute',
+    top:130,
+    color:'white'
     
 
   },
@@ -135,22 +151,43 @@ const styles = StyleSheet.create({
     padding:5,
     borderRadius: 10,
     
+    
   },
   list:{
     fontSize:45,    
     width:300,
     height:300,
     
+    
+    
   },
   square:{
-    backgroundColor:"blue",
-    height:60,
-    width:40,
+    
+    height:80,
+    width:80,
     margin:10,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   txtX:{
     color: 'white',
     fontSize:50,
     
+  },
+  image:{
+    width:300,
+    height:300,
+    position: 'absolute',
+    
+  },
+  image2:{
+    width:'100%',
+    height:'100%',
+    position: 'absolute',
+    zIndex:-1,
+    
+  },
+  txt3:{
+    color:'white',
   }
 });
