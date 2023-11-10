@@ -48,12 +48,27 @@ export default function App() {
     }
   }
 //Проверка если ни кто не выиграл
-  //checkIfNobodyWin = () =>{
-  //  if(board[0] !== " " && board[1] !== " " && board[2] !== " " && board[3] !== " " &&
- //   board[4] !== " " && board[5] !== " " && board[6] !== " " && board[7] !== " " && board[8] !== " "){
-  //    playerNobodyWon()
- //   }
- // }
+  const checkIfNobodyWin = () =>{
+    if(board[0] !== " " && board[1] !== " " && board[2] !== " " && board[3] !== " " &&
+    board[4] !== " " && board[5] !== " " && board[6] !== " " && board[7] !== " " && board[8] !== " "){
+      playerNobodyWon()
+    }
+  }
+
+  const playerNobodyWon = () =>{
+    alert("Nobody WIN!!!")
+    setBoard(
+      [
+        " "," "," ",
+        " "," "," ",
+        " "," "," ",
+      ])
+      if (Symbol == "O"){
+        setNotification("X to Start")
+      }else{
+        setNotification("O to Start")
+      }
+  }
 
   const playerWon = (Symbol) => {
     alert("Player " + Symbol + " WON")
@@ -91,7 +106,7 @@ export default function App() {
       extraData={refresh}
       renderItem={({item, index}) =>(
         <TouchableOpacity style={styles.square} onPress={()=>pressField(index)}>
-          <Text>{item}</Text>
+          <Text style={styles.txtX}>{item}</Text>
         </TouchableOpacity>
       )}/>
     </View>
@@ -132,7 +147,10 @@ const styles = StyleSheet.create({
     height:60,
     width:40,
     margin:10,
+  },
+  txtX:{
+    color: 'white',
+    fontSize:50,
     
-
   }
 });
