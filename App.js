@@ -100,7 +100,7 @@ export default function App() {
       <StatusBar style="auto" />
       <Text style={styles.txt1}>TicTacToe</Text>
       <Text style={styles.txt2}>{notification}</Text>
-      <view>
+      <View>
         <Image source={require('./assets/bg.png')} style={styles.image}/>         
         <FlatList 
           style={styles.list} 
@@ -116,7 +116,7 @@ export default function App() {
             </TouchableOpacity>
       )}/>
 
-      </view>
+      </View>
       <Text style={styles.txt3}>Written by dDaiver</Text>
       
     </View>
@@ -157,6 +157,7 @@ const styles = StyleSheet.create({
     fontSize:45,    
     width:300,
     height:300,
+    top:200,
     
     
     
@@ -168,6 +169,7 @@ const styles = StyleSheet.create({
     margin:10,
     alignItems: 'center',
     justifyContent: 'center',
+    
   },
   txtX:{
     color: 'white',
@@ -178,6 +180,7 @@ const styles = StyleSheet.create({
     width:300,
     height:300,
     position: 'absolute',
+    top:200,
     
   },
   image2:{
@@ -189,5 +192,5 @@ const styles = StyleSheet.create({
   },
   txt3:{
     color:'white',
-  }
+  },
 });
